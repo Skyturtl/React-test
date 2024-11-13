@@ -53,7 +53,7 @@ function Board({xIsNext, squares, onPlay}) {
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </>
-  ) 
+  );
 }
 
 export default function Game() {
@@ -63,13 +63,13 @@ export default function Game() {
 
   function handlePlay(nextSquares) {
     setHistory([...history, nextSquares]);
-    setXIsNext(!xIsNext);
+    setXIsNext(!xIsNext); 
   }
 
   return (
     <div className="game">
       <div className="game-board">
-        <Board isNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
+        <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay}/>
       </div>
       <div className="game-info">
         <ol></ol>
